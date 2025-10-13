@@ -13,9 +13,12 @@ export default {
         background: '#EEE',       // Fond
         strong: '#000000',        // Balises <strong>
       },
+      
       fontFamily: {
-        nunito: ['"Nunito Sans"', 'sans-serif'], // Police principale
+        sans: ['"Nunito Sans"', 'sans-serif'], // par défaut pour tout le site
+        nunito: ['"Nunito Sans"', 'sans-serif'], // alias optionnel
       },
+      
       fontWeight: {
         normal: 400,
         semibold: 600,

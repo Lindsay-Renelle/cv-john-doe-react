@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ✅ Police globale : Nunito Sans pour tout le site */
+html, body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400; /* par défaut, le texte sera en 400 */
+  color: #444; /* couleur de texte principale */
+  background-color: #EEE; /* couleur de fond par défaut (optionnel) */
+}
+
+/* ✅ Les titres en gras (h1, h2, h3...) en 600 */
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+  color: #1e1e1e; /* couleur du texte pour les titres */
+}
