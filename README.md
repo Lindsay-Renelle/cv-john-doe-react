@@ -1,54 +1,91 @@
-# CV John Doe - React + Vite + Tailwind CSS
+# Portfolio Développeur Web
 
-## Description
-Ce projet est un site web de présentation du CV de **John Doe**, développé avec **React**, **Vite**, **Tailwind CSS** et **Font Awesome 6**.  
-Il permet de créer un CV interactif et responsive, avec des icônes et une mise en page moderne.
+Ce projet est un portfolio personnel réalisé dans le cadre de ma formation. Il présente mes compétences, mon parcours, et quelques réalisations. Le site est développé avec **React** et stylisé avec **Tailwind CSS**.
 
 ## Technologies utilisées
-- **React** : framework JavaScript pour construire l’interface utilisateur.  
-- **Vite** : bundler rapide pour le développement et la compilation.  
-- **Tailwind CSS** : framework CSS pour créer rapidement des interfaces modernes.  
-- **Font Awesome 6** : pour l’affichage des icônes sociales et autres éléments graphiques.  
 
-## Prérequis
-- **Node.js** >= 18  
-- **npm** >= 7  
+- [React](https://reactjs.org/) — pour construire les composants
+- [Tailwind CSS](https://tailwindcss.com/) — pour le style rapide et responsive
+- [React Router](https://reactrouter.com/) — pour la navigation entre les pages
+
+Ce projet utilise [Vite](https://vitejs.dev/) pour le build rapide et léger.
+
+
+## Structure du projet
+
+`src/ 
+├── components/ → Composants réutilisables (Navbar, Footer, Home, About, etc.) 
+├── pages/ → Pages principales (Landing, Portfolio, Contact, etc.) 
+├── assets/ → Images et ressources ├── App.js → Configuration des routes 
+└── index.js → Point d’entrée de l’application`
+
+- `tailwind.config.js` — configuration personnalisée des couleurs, polices, etc.
+
+
+## Site en ligne
+
+- [Voir le site](https://ton-nom.alwaysdata.net)
+
 
 ## Installation
 
-### 1. Déplacement dans le dossier du projet
-```bash
+1. Cloner le projet :
 
-cd cv-john-doe-react
+git clone https://github.com/ton-utilisateur/ton-projet.git
 
-### 2.Installer les dépendances 
+
+2. Installer les dépendances :
 
 npm install
 
-### 3.Lancement du projet 
+3. Lancer le serveur de développement :
 
-npm run dev 
+npm run dev
 
-### 4.Création d'une version de production
+
+## Hébergement
+
+Le site sera hébergé sur **AlwaysData**, un service d’hébergement web.
+
+Pour transférer les fichiers du projet vers le serveur, j’utilise **FileZilla**, un client FTP.
+
+### Étapes :
+
+1. Compiler le projet pour la production :
 
 npm run build
 
-## Structure du projet
-- src/ : composants React + CSS principal
-- public/ : fichiers statiques (favicon, icônes)
-- index.html : point d’entrée avec Tailwind et Font Awesome
 
-## Conseils
-- Styliser avec Tailwind CSS
-- Polices et couleurs dans tailwind.config.js
-- Icônes via Font Awesome 6 (fab, fas)
+2. Se connecter à AlwaysData via FileZilla :
+- Hôte : ftp.alwaysdata.com
+- Identifiants fournis par AlwaysData
 
-## Déploiement
+3. Transférer le dossier `dist/` (généré par Vite) dans le répertoire web du serveur
 
-Héberge sur GitHub Pages, Vercel ou autre serveur web statique.
+4. Vérifier que le site est accessible en ligne via l’URL fournie par AlwaysData
 
-## Références
-- React
-- Vite
-- Tailwind CSS
-- Font Awesome 6
+## Objectifs
+
+- Créer une interface claire et professionnelle
+- Respecter une maquette visuelle précise
+- Utiliser des composants modulaires
+- Appliquer mes compétences en HTML, CSS, JavaScript, React et Tailwind
+
+## Site en ligne
+
+- [Voir le site](https://ton-nom.alwaysdata.net)
+
+
+## Aperçu
+
+Le site contient :
+- Une section Home avec une image de fond
+- Une section À propos avec photo et texte
+- Une liste de compétences avec barres de progression
+- Une navigation fluide et responsive
+
+## Contact
+
+Si vous souhaitez me contacter ou en savoir plus, vous pouvez utiliser le formulaire de contact intégré ou m’écrire directement.
+
+---

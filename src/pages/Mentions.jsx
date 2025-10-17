@@ -1,128 +1,123 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet"; // SEO : balises <head> dynamiques
 
 function Mentions() {
-  // États pour gérer l'ouverture/fermeture de chaque bloc
-  const [open, setOpen] = useState("editeur");
+  const [openIndex, setOpenIndex] = useState(null);
 
-  // Fonction de bascule
-  const toggleSection = (section) => {
-    setOpen(open === section ? "" : section);
+  const toggleSection = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
+  const sections = [
+    {
+      title: "Éditeur du site",
+      content: (
+        <>
+          <p>John Doe</p>
+          <p>40 Rue Laure Diebold</p>
+          <p>69009 Lyon, France</p>
+          <p className="text-primary">06 20 30 40 50</p>
+          <p className="text-primary">john.doe@gmail.com</p>
+        </>
+      ),
+    },
+    {
+      title: "Hébergeur",
+      content: (
+        <>
+          <p>Always Data</p>
+          <p>91 rue du Faubourg Saint Honoré</p>
+          <p>75008 Paris</p>
+          <p>
+            <a
+              href="https://www.alwaysdata.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              www.alwaysdata.com
+            </a>
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Crédits",
+      content: (
+        <>
+          <p>Site développé par John Doe, étudiant du CEF.</p>
+          <p>
+            Les images libres de droit sont issues du site{" "}
+            <a
+              href="https://pixabay.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Pixabay
+            </a>
+            .
+          </p>
+        </>
+      ),
+    },
+  ];
+
   return (
-    <section className="max-w-4xl mx-auto px-4 py-16 font-nunito">
-      {/* Titre principal */}
-      <h2 className="text-3xl font-semibold text-[#0d6efd] text-center mb-2">
-        MENTIONS LÉGALES
-      </h2>
-      <div className="w-24 h-1 bg-[#0d6efd] mx-auto mb-12" />
+    <>
+      {/* SEO : balises <title>, <meta description> et <meta robots> */}
+      <Helmet>
+        <title>Mentions légales – John Doe</title>
+        <meta
+          name="description"
+          content="Mentions légales du site portfolio de John Doe."
+        />
+        <meta name="robots" content="noindex" />
+      </Helmet>
 
-      {/* Bloc 1 : Éditeur du site */}
-      <div className="bg-blue-50 border border-[#0d6efd] rounded-lg p-6 mb-8 cursor-pointer transition-all duration-300">
-        <div
-          className="flex justify-between items-center mb-4"
-          onClick={() => toggleSection("editeur")}
-        >
-          <h3
-            className={`text-lg font-semibold ${
-              open === "editeur" ? "text-[#0d6efd]" : "text-black"
-            }`}
-          >
-            Éditeur du site
-          </h3>
-          <i
-            className={`fa-solid fa-chevron-${
-              open === "editeur" ? "up" : "down"
-            } text-[#0d6efd] text-xl transition-transform duration-300`}
-          ></i>
-        </div>
-        {open === "editeur" && (
-          <div className="text-sm text-gray-700 space-y-1">
-            <p>John Doe</p>
-            <p>40 Rue Laure Diebold</p>
-            <p>69009 Lyon, France</p>
-            <p className="text-[#0d6efd]">06 20 30 40 50</p>
-            <p className="text-[#0d6efd]">john.doe@gmail.com</p>
-          </div>
-        )}
-      </div>
+      <section className="max-w-4xl mx-auto px-4 py-16 font-nunito">
+        {/* Titre principal */}
+        <h2 className="text-3xl font-semibold text-black text-center mb-2 uppercase">
+          Mentions légales
+        </h2>
+        
+        {/* Ligne bleue de séparation */}
+        <div className="w-24 h-1 bg-primary mx-auto mb-12" />
 
-      {/* Bloc 2 : Hébergeur */}
-      <div className="bg-blue-50 border border-[#0d6efd] rounded-lg p-6 mb-8 cursor-pointer transition-all duration-300">
-        <div
-          className="flex justify-between items-center mb-4"
-          onClick={() => toggleSection("hebergeur")}
-        >
-          <h3
-            className={`text-lg font-semibold ${
-              open === "hebergeur" ? "text-[#0d6efd]" : "text-black"
-            }`}
+        {/* Boucle sur les 3 blocs */}
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className="bg-blue-50 border border-primary rounded-lg p-6 mb-6 shadow-sm transition-all duration-300"
           >
-            Hébergeur
-          </h3>
-          <i
-            className={`fa-solid fa-chevron-${
-              open === "hebergeur" ? "up" : "down"
-            } text-[#0d6efd] text-xl transition-transform duration-300`}
-          ></i>
-        </div>
-        {open === "hebergeur" && (
-          <div className="text-sm text-gray-700 space-y-1">
-            <p>Always Data</p>
-            <p>91 rue du Faubourg Saint Honoré</p>
-            <p>75008 Paris</p>
-            <p>
-              <a
-                href="https://www.alwaysdata.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0d6efd] hover:underline"
+            <button
+              onClick={() => toggleSection(index)}
+              className="w-full flex justify-between items-center text-left"
+            >
+              <h3
+                className={`text-lg font-semibold ${
+                  openIndex === index ? "text-primary" : "text-gray-900"
+                }`}
               >
-                www.alwaysdata.com
-              </a>
-            </p>
-          </div>
-        )}
-      </div>
+                {section.title}
+              </h3>
+              <i
+                className={`fa-solid fa-chevron-${
+                  openIndex === index ? "up" : "down"
+                } text-primary text-xl transition-transform duration-300`}
+              ></i>
+            </button>
 
-      {/* Bloc 3 : Crédits */}
-      <div className="bg-blue-50 border border-[#0d6efd] rounded-lg p-6 cursor-pointer transition-all duration-300">
-        <div
-          className="flex justify-between items-center mb-4"
-          onClick={() => toggleSection("credits")}
-        >
-          <h3
-            className={`text-lg font-semibold ${
-              open === "credits" ? "text-[#0d6efd]" : "text-black"
-            }`}
-          >
-            Crédits
-          </h3>
-          <i
-            className={`fa-solid fa-chevron-${
-              open === "credits" ? "up" : "down"
-            } text-[#0d6efd] text-xl transition-transform duration-300`}
-          ></i>
-        </div>
-        {open === "credits" && (
-          <div className="text-sm text-gray-700 space-y-2">
-            <p>Site développé par John Doe, étudiant du CEF.</p>
-            <p>
-              Les images libres de droit sont issues du site{" "}
-              <a
-                href="https://pixabay.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0d6efd] hover:underline"
-              >
-                Pixabay
-              </a>
-              .
-            </p>
+            {/* Contenu affiché seulement quand la section est ouverte */}
+            {openIndex === index && (
+              <div className="mt-4 text-sm text-gray-700 space-y-1">
+                {section.content}
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    </section>
+        ))}
+      </section>
+    </>
   );
 }
 

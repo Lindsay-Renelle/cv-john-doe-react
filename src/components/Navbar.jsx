@@ -1,7 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { label: "ACCUEIL", path: "/" },
@@ -19,8 +21,17 @@ function Navbar() {
           JOHN DOE
         </div>
 
-        {/* Navigation */}
-        <nav className="flex space-x-8 text-sm font-semibold uppercase">
+        {/* Bouton hamburger (mobile) */}
+        <button
+          className="text-white text-2xl md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menu"
+        >
+          <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"}`}></i>
+        </button>
+
+        {/* Menu desktop */}
+        <nav className="hidden md:flex space-x-8 text-sm font-semibold uppercase">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -36,9 +47,28 @@ function Navbar() {
           ))}
         </nav>
       </div>
+
+      {/* Menu mobile */}
+      {isOpen && (
+        <nav className="md:hidden bg-black px-6 pb-4 space-y-4 text-sm font-semibold uppercase">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setIsOpen(false)}
+              className={`block transition ${
+                location.pathname === item.path
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }
 
 export default Navbar;
-

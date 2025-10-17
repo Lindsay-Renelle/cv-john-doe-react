@@ -58,7 +58,7 @@ function App() {
           }
         />
 
-        {/* ✅ Page Mentions légales (corrigée) */}
+        {/* Page Mentions légales  */}
         <Route
           path="/mentions"
           element={
@@ -73,3 +73,4 @@ function App() {
 }
 
 export default App;
+

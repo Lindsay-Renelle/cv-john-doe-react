@@ -2,7 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import bannerImg from "../assets/images/banner.jpg";
+import bannerDesktop from "../assets/images/banner.jpg";
+import bannerTablet from "../assets/images/banner-tablette.jpg";
+import bannerMobile from "../assets/images/banner-mobile.jpg";
 
 function Layout({ children }) {
   const location = useLocation();
@@ -13,13 +15,28 @@ function Layout({ children }) {
       {/* Barre de navigation */}
       <Navbar />
 
-      {/* Bannière affichée sur toutes les pages sauf l'accueil */}
+      {/* Bannière responsive */}
       {!isHome && (
-        <div className="w-full">
+        <div className="w-full h-[250px] overflow-hidden">
+          {/* Desktop */}
           <img
-            src={bannerImg}
-            alt="Bannière"
-            className="w-full h-[250px] object-cover object-center"
+            src={bannerDesktop}
+            alt="Bannière desktop"
+            className="hidden lg:block w-full h-full object-cover object-center"
+          />
+
+          {/* Tablette */}
+          <img
+            src={bannerTablet}
+            alt="Bannière tablette"
+            className="hidden md:block lg:hidden w-full h-full object-cover object-center"
+          />
+
+          {/* Mobile */}
+          <img
+            src={bannerMobile}
+            alt="Bannière mobile"
+            className="block md:hidden w-full h-full object-cover object-center"
           />
         </div>
       )}
