@@ -89,3 +89,10 @@ Le site contient :
 Si vous souhaitez me contacter ou en savoir plus, vous pouvez utiliser le formulaire de contact intégré ou m’écrire directement.
 
 ---
+### Validation W3C
+
+Toutes les pages du site ont été validées via le navigateur :
+
+- Pages validées : Accueil, À propos, Services, Portfolio, Blog, Contact, Mentions légales, Modale, Page 404
+- Composants communs (Footer, Navbar) validés indirectement car présents sur chaque page
+- Aucune erreur bloquante détectée, uniquement des avertissements liés à l’environnement de développement (Vite)

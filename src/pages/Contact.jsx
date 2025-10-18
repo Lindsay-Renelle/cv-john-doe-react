@@ -32,7 +32,7 @@ function Contact() {
             Pour me contacter en vue d’un entretien ou d’une future collaboration,
             merci de remplir le formulaire de contact.
           </p>
-          <div className="w-24 h-1 bg-[#0d6efd] mx-auto mb-12" />
+          <div className="w-48 h-1 bg-[#0d6efd] mx-auto mb-12" />
 
           {/*Grille responsive : formulaire à gauche, coordonnées à droite */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

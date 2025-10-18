@@ -80,7 +80,7 @@ function Mentions() {
         <h2 className="text-3xl font-semibold text-black text-center mb-2 uppercase">
           Mentions légales
         </h2>
-        
+
         {/* Ligne bleue de séparation */}
         <div className="w-24 h-1 bg-primary mx-auto mb-12" />
 
@@ -94,18 +94,19 @@ function Mentions() {
               onClick={() => toggleSection(index)}
               className="w-full flex justify-between items-center text-left"
             >
-              <h3
+              <span
                 className={`text-lg font-semibold ${
                   openIndex === index ? "text-primary" : "text-gray-900"
                 }`}
               >
                 {section.title}
-              </h3>
-              <i
+              </span>
+              <span
                 className={`fa-solid fa-chevron-${
                   openIndex === index ? "up" : "down"
                 } text-primary text-xl transition-transform duration-300`}
-              ></i>
+                aria-hidden="true"
+              ></span>
             </button>
 
             {/* Contenu affiché seulement quand la section est ouverte */}
