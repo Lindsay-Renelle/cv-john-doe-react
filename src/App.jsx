@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -67,6 +68,17 @@ function App() {
             </Layout>
           }
         />
+
+        {/*Page 404*/ }
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
+
       </Routes>
     </Router>
   );
