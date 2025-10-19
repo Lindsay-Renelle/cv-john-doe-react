@@ -24,7 +24,7 @@ Ce projet utilise [Vite](https://vitejs.dev/) pour le build rapide et léger.
 
 ## Site en ligne
 
-- [Voir le site](https://ton-nom.alwaysdata.net)
+- [Voir le site](https://ton-nom.vercel.com)
 
 
 ## Installation
@@ -45,54 +45,42 @@ npm run dev
 
 ## Hébergement
 
-Le site sera hébergé sur **AlwaysData**, un service d’hébergement web.
+Le site sera hébergé sur **Vercel**, un service d’hébergement web optimisé pour les projets React et Vite.
 
-Pour transférer les fichiers du projet vers le serveur, j’utilise **FileZilla**, un client FTP.
+# Déploiement sur Vercel
 
-### Étapes :
-
-1. Compiler le projet pour la production :
+1. Compiler le projet pour la produciton
 
 npm run build
 
+2. Importer le projet sur https://vercel.com via GitHub
 
-2. Se connecter à AlwaysData via FileZilla :
-- Hôte : ftp.alwaysdata.com
-- Identifiants fournis par AlwaysData
+3. Vercel détecte automatiquement la configuration Vite et déploie le site
 
-3. Transférer le dossier `dist/` (généré par Vite) dans le répertoire web du serveur
-
-4. Vérifier que le site est accessible en ligne via l’URL fournie par AlwaysData
+4. Une URL publique est générée automatiquement pour accéder au site en ligne
 
 ## Objectifs
 
-- Créer une interface claire et professionnelle
-- Respecter une maquette visuelle précise
-- Utiliser des composants modulaires
-- Appliquer mes compétences en HTML, CSS, JavaScript, React et Tailwind
-
-## Site en ligne
-
-- [Voir le site](https://ton-nom.alwaysdata.net)
-
+• Créer une interface claire et professionnelle
+• Respecter une maquette visuelle précise
+• Utiliser des composants modulaires
+• Appliquer mes compétences en HTML, CSS, JavaScript, React et Tailwind
 
 ## Aperçu
-
 Le site contient :
-- Une section Home avec une image de fond
-- Une section À propos avec photo et texte
-- Une liste de compétences avec barres de progression
-- Une navigation fluide et responsive
+
+• Une section Home avec une image de fond
+• Une section À propos avec photo et texte
+• Une liste de compétences avec barres de progression
+• Une navigation fluide et responsive
 
 ## Contact
-
 Si vous souhaitez me contacter ou en savoir plus, vous pouvez utiliser le formulaire de contact intégré ou m’écrire directement.
 
----
 ### Validation W3C
 
 Toutes les pages du site ont été validées via le navigateur :
 
-- Pages validées : Accueil, À propos, Services, Portfolio, Blog, Contact, Mentions légales, Modale, Page 404
-- Composants communs (Footer, Navbar) validés indirectement car présents sur chaque page
-- Aucune erreur bloquante détectée, uniquement des avertissements liés à l’environnement de développement (Vite)
+• Pages validées : Accueil, À propos, Services, Portfolio, Blog, Contact, Mentions légales, Modale, Page 404
+• Composants communs (Footer, Navbar) validés indirectement car présents sur chaque page
+• Aucune erreur bloquante détectée, uniquement des avertissements liés à l’environnement de développement (Vite)
