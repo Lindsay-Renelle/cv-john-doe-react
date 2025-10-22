@@ -45,19 +45,25 @@ npm run dev
 
 ## Hébergement
 
-Le site sera hébergé sur **Vercel**, un service d’hébergement web optimisé pour les projets React et Vite.
+Le site est hébergé sur AlwaysData, un service d’hébergement web compatible avec les projets React et Vite. Le déploiement est effectué manuellement via FileZilla, un client FTP sécurisé.
 
-# Déploiement sur Vercel
+# Déploiement sur AlwaysData
 
 1. Compiler le projet pour la produciton
 
 npm run build
 
-2. Importer le projet sur https://vercel.com via GitHub
+2. Se connecter à AlwaysData via FileZilla
+• Ouvrir FileZilla
+• Renseigner les identifiants FTP fournis par AlwaysData
+• Se connecter au serveur distant
 
-3. Vercel détecte automatiquement la configuration Vite et déploie le site
+3. Transférer les fichiers du dossier dist/
+• Glisser-déposer tous les fichiers du dossier dist/ dans le répertoire www/ du serveur AlwaysData
 
-4. Une URL publique est générée automatiquement pour accéder au site en ligne
+4. Vérifier le site en ligne
+• Une URL publique est générée automatiquement (ex. https://ton-nom.alwaysdata.net)
+• Le site est accessible immédiatement après le transfert
 
 ## Objectifs
 
