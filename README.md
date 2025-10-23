@@ -2,6 +2,7 @@
 
 Ce projet est un portfolio personnel réalisé dans le cadre de ma formation. Il présente mes compétences, mon parcours, et quelques réalisations. Le site est développé avec **React** et stylisé avec **Tailwind CSS**.
 
+
 ## Technologies utilisées
 
 - [React](https://reactjs.org/) — pour construire les composants
@@ -24,14 +25,21 @@ Ce projet utilise [Vite](https://vitejs.dev/) pour le build rapide et léger.
 
 ## Site en ligne
 
-- [Voir le site](https://ton-nom.vercel.com)
+- [Voir le site](celine-devweb.alwaysdata.net)
+
+
+## Prérequis
+
+- Node.js ≥ 18
+- npm ≥ 9
+- Vite (installé automatiquement)
 
 
 ## Installation
 
 1. Cloner le projet :
 
-git clone https://github.com/ton-utilisateur/ton-projet.git
+git clone https://github.com/Lindsay-Renelle/cv-john-doe-react.git
 
 
 2. Installer les dépendances :
@@ -46,6 +54,7 @@ npm run dev
 ## Hébergement
 
 Le site est hébergé sur AlwaysData, un service d’hébergement web compatible avec les projets React et Vite. Le déploiement est effectué manuellement via FileZilla, un client FTP sécurisé.
+
 
 # Déploiement sur AlwaysData
 
@@ -62,7 +71,7 @@ npm run build
 • Glisser-déposer tous les fichiers du dossier dist/ dans le répertoire www/ du serveur AlwaysData
 
 4. Vérifier le site en ligne
-• Une URL publique est générée automatiquement (ex. https://ton-nom.alwaysdata.net)
+• Une URL publique est générée automatiquement (ex. https://celine-devweb.alwaysdata.net)
 • Le site est accessible immédiatement après le transfert
 
 ## Objectifs
@@ -85,8 +94,13 @@ Si vous souhaitez me contacter ou en savoir plus, vous pouvez utiliser le formul
 
 ### Validation W3C
 
-Toutes les pages du site ont été validées via le navigateur :
+• Les pages HTML et le fichier CSS ont été validés via les outils W3C.  
+• Les captures d’écran des résultats sont disponibles dans le dossier `/captures`à la racine de "cv-john-doe-react"
 
-• Pages validées : Accueil, À propos, Services, Portfolio, Blog, Contact, Mentions légales, Modale, Page 404
-• Composants communs (Footer, Navbar) validés indirectement car présents sur chaque page
-• Aucune erreur bloquante détectée, uniquement des avertissements liés à l’environnement de développement (Vite)
+## Livrable attendu
+
+Ce dépôt contient :
+• Le code source complet du projet React/Vite
+• Le fichier `README.md` avec les instructions d’installation et de déploiement
+• Les captures d’écran des validations W3C dans le dossier `/captures`
+• Le lien vers le site hébergé : [https://celine-dweeb.alwaysdata.net](https://celine-dweeb.alwaysdata.net)
